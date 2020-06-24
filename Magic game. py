@@ -1,0 +1,20 @@
+from random import randint
+from time import process_time
+print("Magic game")
+count=0
+start=process_time()
+for i in range(1,10):
+	val=randint(1,10)
+	y=eval(input("Enter your magic number:"))
+	if y>val:
+		print("Too high")
+	if val>y:
+		print("Too low")
+	if y==val:
+		print("You win",end=" ")
+		count+=i
+		end=process_time()
+		print("at",count,"trials","at time",end)
+		break
+	else:
+		print("Try again")
